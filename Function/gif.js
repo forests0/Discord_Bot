@@ -27,7 +27,7 @@ client.on("message", (message) => {
         return message.reply("sorry.. this gif is too big. so I can\'t upload.");
         break;
       }
-      if (isNaN(no) || no > 14) return message.reply("only number 1-14");
+      if (isNaN(no) || no > 8) return message.reply("only number 1-8");
       var path = "./gif/";
       path = path.concat(no, ".gif");
       console.log(path);
