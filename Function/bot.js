@@ -5,7 +5,7 @@ const prefix = "!";
 
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setActivity("Just", { type: "WATCHING" });
+  client.user.setActivity("", { type: "WATCHING" });
 });
 
 client.on("message", (message) => {
@@ -21,8 +21,7 @@ client.on("message", (message) => {
         message.member.voiceChannel
           .join()
           .then((connection) => {
-            message.reply("playing music!");
-            const dispatcher = connection.playFile("./music.mp3");
+            const dispatcher = connection.playFile("./.mp3");
             dispatcher.on("end", (end) => {});
           })
           .catch(console.log);
@@ -35,7 +34,7 @@ client.on("message", (message) => {
         message.member.voiceChannel.leave();
         message.reply("bye!");
       } else {
-        message.reply("Who do you want to leave? It's not me?");
+        message.reply("Who wants to leave with me?");
       }
       break;
   }
