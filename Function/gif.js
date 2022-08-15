@@ -1,7 +1,6 @@
 const discord = require("discord.js");
 const config = require("./config.json");
 const client = new discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES"] });
-const Attachment = require('discord.js');
 const prefix = "!";
 
 client.on("ready", () => {
