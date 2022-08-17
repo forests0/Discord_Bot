@@ -4,6 +4,7 @@ const client = new discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES"] });
 const prefix = "!";
 
 client.on("ready", () => {
+  client.user.setUsername('MyNewName!')
   console.log(`Logged in as ${client.user.tag}!`);
   client.user.setActivity("Just", { type: "WATCHING" });
 });
@@ -23,13 +24,12 @@ client.on("message", (message) => {
       var no = args.join(" ");
       if (!no) no = "1";
       if (no == 2) {
-        return message.reply("sorry.. this gif is too big. so I can\'t upload.");
+        return message.reply("sorry.. this gif is too big. so I can\'t upload it.");
         break;
       }
-      if (isNaN(no) || no > 8) return message.reply("only number 1-8");
+      if (isNaN(no) || no > 9) return message.reply("only number 1-9");
       var path = "./gif/";
       path = path.concat(no, ".gif");
-      console.log(path);
       const attachment = new discord.MessageAttachment(path);
       message.channel.send(attachment);
       break;
