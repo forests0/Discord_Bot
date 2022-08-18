@@ -4,9 +4,9 @@ const client = new discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES"] });
 const prefix = "!";
 
 client.on("ready", () => {
-  client.user.setUsername('MyNewName!')
+  client.user.setUsername('테스트용 친구')
   console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setActivity("Just", { type: "WATCHING" });
+  client.user.setActivity("", { type: "WATCHING" });
 });
 
 client.on("message", (message) => {
@@ -23,9 +23,8 @@ client.on("message", (message) => {
       const args = message.content.split(" ").slice(1);
       var no = args.join(" ");
       if (!no) no = "1";
-      if (no == 2) {
+      if (no == 2 || no == 9) {
         return message.reply("sorry.. this gif is too big. so I can\'t upload it.");
-        break;
       }
       if (isNaN(no) || no > 9) return message.reply("only number 1-9");
       var path = "./gif/";
