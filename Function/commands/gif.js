@@ -3,8 +3,6 @@ const discord = require("discord.js");
 module.exports = {
   name : 'gif',
   execute(msg) {
-    const commandBody = msg.content.slice(prefix.length);
-    const command = args.shift().toLowerCase();
     const args = msg.content.split(" ").slice(1);
       var no = args.join(" ");
       if (!no) no = "1";
