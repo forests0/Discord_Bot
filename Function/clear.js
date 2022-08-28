@@ -2,11 +2,6 @@ const discord = require("discord.js");
 const config = require("./config.json");
 const client = new discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES"] });
 const prefix = "!";
-client.on("ready", () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setActivity("Just", { type: "WATCHING" });
-});
-
 client.on("message", (message) => {
   if (!message.content.startsWith(prefix)) return;
 
