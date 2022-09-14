@@ -8,9 +8,10 @@ module.exports = {
         const createdAt = user.user.createdAt
         const embed = new discord.MessageEmbed()
         .setTitle(`${user.user.tag}님의 정보`)
+        .setColor("26ff67")
         .setThumbnail(user.user.avatarURL())
         if(!user.user.avatarURL()) embed.setThumbnail(user.user.defalut.avatarURL)
-        .addFields(
+        embed.addFields(
             { name: "아이디 : ", value: user.user.id},
             { name: "가입날짜 : ", value: `${createdAt.getFullYear()}년 ${createdAt.getMonth()}월 
                 ${createdAt.getDay()}일 ${createdAt.getHours()}시 ${createdAt.getMinutes()}분`}
