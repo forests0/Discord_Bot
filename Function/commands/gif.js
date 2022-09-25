@@ -9,7 +9,7 @@ module.exports = {
       if (no == 2 || no == 9) {
         return msg.reply("sorry.. this gif is too big. so I can\'t upload it.");
       }
-      if (isNaN(no) || no > 9) return msg.reply("only number 1-9");
+      if (isNaN(no) || no > 10) return msg.reply("only number 1-10");
       var path = "./gif/";
       path = path.concat(no, ".gif");
       const attachment = new discord.MessageAttachment(path);

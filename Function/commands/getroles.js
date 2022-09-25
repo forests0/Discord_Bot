@@ -6,7 +6,7 @@ module.exports = {
     if (!roles) msg.reply('Write the roles. If you don\'t know what is the roles, type \'!getroles help\'.');
     switch(roles) {
       case 'help' :
-        msg.channel.send('roles : basic | intermediate | advanced || You type !getroles (rolename)')
+        msg.channel.send('```roles : basic | intermediate | advanced || You type !getroles (rolename)```')
         break;
       case 'basic' :
         msg.member.roles.add("1009659511717494854");
