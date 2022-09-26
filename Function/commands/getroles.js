@@ -6,7 +6,7 @@ module.exports = {
     if (!roles) msg.reply('Write the roles. If you don\'t know what is the roles, type \'!getroles help\'.');
     switch(roles) {
       case 'help' :
-        msg.channel.send('```roles : basic | intermediate | advanced || You type !getroles (rolename)```')
+        msg.channel.send('```roles : basic | intermediate | advanced | delete || You type !getroles (rolename)```')
         break;
       case 'basic' :
         msg.member.roles.add("1009659511717494854");
@@ -19,6 +19,9 @@ module.exports = {
       case 'advanced' :
         msg.member.roles.add('1011079971088896191');
         msg.reply("설정 완료!");
+        break;
+      case 'delete' :
+        msg.member.roles.delete(reason='just');
         break;
     }
     //msg.member.setNickname(`✓${msg.member.user.username}`);
