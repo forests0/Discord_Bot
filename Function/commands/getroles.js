@@ -21,10 +21,9 @@ module.exports = {
         msg.reply("설정 완료!");
         break;
       case 'delete' :
-        msg.member.roles.delete(reason='just');
+        //msg.member.roles.delete(reason='just');
+        //delete 함수가 없다고 뜬다. 공식문서로 가자
         break;
     }
-    //msg.member.setNickname(`✓${msg.member.user.username}`);
-    
   },
 };
