@@ -69,7 +69,6 @@ client.on("message", (message) => {
       command.execute(message, comarg);
       break;
     default:
-      message.reply(`"${message}" 가 명령어가 아닌거같아요!`);
       break;
   }
 });
