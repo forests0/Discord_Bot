@@ -15,7 +15,7 @@ module.exports = {
         { name: "!emoji (num)", value: "이모지 하나를 보여줍니다", inline: true },
         { name: "!getroles help", value:'역할을 부여해줍니다', inline: true },
         { name: "!gif (num)", value:'local에 있는 gif를 보여드립니다', inline: true },
-        { name: "!userinfo", value:'user의 정보를 보여드립니다', inline: true },
+        { name: "!userinfo @(유저 자신)", value:'user의 정보를 보여드립니다', inline: true },
         { name: "!sum (num)", value:'값을 더해줍니다', inline: true }
       )
       .setTimestamp(new Date())
