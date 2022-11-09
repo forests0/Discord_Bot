@@ -4,7 +4,6 @@ module.exports = {
     const prefix = "!";
     const commandBody = msg.content.slice(prefix.length);
     const args = commandBody.split(" ");
-
     const numArgs = args.map((x) => parseFloat(x));
     const sum = numArgs.reduce((counter, x) => (counter += x));
     msg.channel.send(`합계 : ${sum}`);
